@@ -21,8 +21,9 @@
 
   <title>어디보냐</title>
 
-<link href="../../../static/calendar.css" rel="stylesheet">
-<link href="../../../static/style.css" rel="stylesheet"></head>
+<link href="../../../static/style.css" rel="stylesheet">
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script></head>
 
 <body> <!-- Add your content of header -->
 <header>
@@ -61,39 +62,24 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <h1 class="text-center">나의 학습이력</h1>
-          <br>
+          <h1 class="text-center">나의 점수는</h1>
           <div class="text-center">
-            <b>70점 이상: </b>
-            <img src="../../../static/images/good.png" style="width:50px;" />
-            &nbsp;
-            &nbsp;
-            <b>69점 ~ 30점: </b>
-            <img src="../../../static/images/soso.png" style="width:50px;" />
-            &nbsp;
-            &nbsp;
-            <b>29점 이하: </b>
-            <img src="../../../static/images/bad.png" style="width:50px;" />
+            <b><br><br><br><br><br><br><br><br><br>측정 결과가 존재하지 않습니다.<br><br><br><br><br><br><br><br><br></b>
           </div>
-          <div class="clearfix">
-            <a class="btn btn-info left" href="{% url 'conc:mypage' %}?{{ prev_month }}"> 이전 </a>
-            <a class="btn btn-info right" href="{% url 'conc:mypage' %}?{{ next_month }}"> 다음 </a>
-          </div>
-          {{ calendar }}
        </div>
       </div>
     </div>
   </div>
 
 
-
-
-
 <footer class="footer-container white-text-container">
   <div class="container">
-    <div class="row">    
+    <div class="row">
+
+     
       <div class="col-xs-12">
         <h3>INUIT</h3>
+
         <div class="row">
           <div class="col-xs-12 col-sm-7">
             <p><small>Capstone Design (2021-2022)</small>
@@ -101,7 +87,9 @@
             <p><small>Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small>
             </p>
           </div>
-        </div>       
+        </div>
+        
+        
       </div>
     </div>
   </div>

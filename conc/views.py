@@ -2,15 +2,11 @@ from django.views.decorators import gzip
 from django.views import generic
 from django.shortcuts import render, redirect
 from django.http import StreamingHttpResponse, HttpResponse, HttpResponseRedirect
-#from django.utils import timezone
-#from django.urls import reverse
 from .models import TempScore, History
 from django.utils.safestring import mark_safe
 from datetime import date, datetime, timedelta
 from .utils import Calendar
 import calendar
-
-#from django.template import loader
 
 #모델 경로 관련
 import os
@@ -78,6 +74,9 @@ def project(request):
 def result(request):
     stocks = TempScore.objects.filter(user=request.user).order_by('time')
 
+    if len(stocks) == 0:
+        return render(request, 'conc/result_error.html')
+
     score_list = []
     dt = stocks[0].time
     score = 0
@@ -119,7 +118,7 @@ def result(request):
 
 class VideoCamera(object):
     def __init__(self):
-        self.model = load_model(os.path.join(os.path.dirname(__file__),"..") + '/static/model7.h5')
+        self.model = load_model(os.path.join(os.path.dirname(__file__),"..") + '/static/model.h5')
         self.video = cv2.VideoCapture(0)
         #(1)(self.status, self.frame) = self.video.read()
         #(1)threading.Thread(target=self.update, args=()).start()
@@ -160,10 +159,8 @@ class VideoCamera(object):
         
         _, jpeg = cv2.imencode('.jpg', image)
         return jpeg.tobytes()
-        #if cv2.waitkey(1) & 0xFF == ord('q'):
-        #    break
 
-    '''#1
+    '''
     def update(self):
         while True:
             (self.status, self.frame) = self.video.read()
