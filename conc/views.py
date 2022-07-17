@@ -67,6 +67,8 @@ def next_month(d):
     return month
 
 def project(request):
+    if not request.user.is_authenticated: #유저가 로그인 되어있지 않으면,
+        return redirect('common:login') #login 페이지로 redirect
     if request.method == "POST":
         return redirect('conc:result')
     return render(request, 'conc/project.html')
@@ -106,8 +108,8 @@ def result(request):
 
     timediff = stocks[len(stocks)-1].time - stocks[0].time
     history = History(user=request.user, avg_score=total_avg_score, start_time=stocks[0].time, end_time=stocks[len(stocks)-1].time, duration=timediff.seconds//60)
-    history.save()
-    stocks.delete()
+    history.save() #History에 전체 평균 점수 저장
+    stocks.delete() #TempScore에 저장된 기록 삭제
 
     scoreJson = json.dumps(score_list)
     data = {
@@ -120,8 +122,8 @@ class VideoCamera(object):
     def __init__(self):
         self.model = load_model(os.path.join(os.path.dirname(__file__),"..") + '/static/model.h5')
         self.video = cv2.VideoCapture(0)
-        #(1)(self.status, self.frame) = self.video.read()
-        #(1)threading.Thread(target=self.update, args=()).start()
+        #(self.status, self.frame) = self.video.read()
+        #threading.Thread(target=self.update, args=()).start()
         
     def __del__(self):
         self.video.release()
