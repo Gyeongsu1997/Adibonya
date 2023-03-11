@@ -6,14 +6,14 @@
 ## 사용방법
 - 터미널에서 명령어 입력
 
-1.git clone https://github.com/Gyeongsu1997/Adibonya.git [폴더명]
+  1.git clone https://github.com/Gyeongsu1997/Adibonya.git [폴더명]
 
-2.cd [폴더명]
+  2.cd [폴더명]
 
-3.pip install -r requirements.txt
+  3.pip install -r requirements.txt
 
-4.python manage.py migrate
-
-5.python manage.py runserver
+  4.python manage.py migrate
+  
+  5.python manage.py runserver
 
 - 브라우저에서 http://127.0.0.1:8000/로 접속하여 서비스 이용
