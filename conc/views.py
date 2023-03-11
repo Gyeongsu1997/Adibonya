@@ -131,6 +131,9 @@ class VideoCamera(object):
     def get_frame(self, user):
         (self.status, self.frame) = self.video.read()
         
+        if (not self.status):
+            self.video = cv2.VideoCapture(0)
+            return False
         image = self.frame
         face, confidence = cv.detect_face(image)
         for idx, f in enumerate(face):
@@ -171,6 +174,8 @@ class VideoCamera(object):
 def gen(camera, user):
     while True:
         frame = camera.get_frame(user)
+        if (not frame):
+            continue
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
