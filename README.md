@@ -5,7 +5,9 @@
 
 ## 사용방법
 - 터미널에서 명령어 입력
+
 1.git clone https://github.com/Gyeongsu1997/Adibonya.git [폴더명]
+
 2.cd [폴더명]
 3.pip install -r requirements.txt
 4.python manage.py migrate
