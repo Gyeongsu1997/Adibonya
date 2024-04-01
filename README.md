@@ -23,7 +23,7 @@
 - [[python] 쉽고 간단하게 마스크 착용 유무 판별기 만들기](https://bskyvision.com/1082)
 
 이 페이지에서는 서비스를 위한 웹 개발 과정에 중점을 두어 기록하였다. 작품개요는 아래 포스터와 같다. 
-<img src="../../images/2022-06-22-capstone/poster.PNG" alt="poster"  />
+![poster](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/88d84ea6-dc7c-401a-b5a5-b1d180ec8f94)
 
 ## 사용 기술
 Python 기반 웹 프레임워크인 Django를 사용하였고 mashup-template.com에서 제공하는 Mountain HTML 템플릿을 사용하였다. DBMS는 Django에서 기본으로 제공하는 SQLite를 사용하였다.
@@ -31,32 +31,32 @@ Python 기반 웹 프레임워크인 Django를 사용하였고 mashup-template.c
 
 ## 주요 기능별 사용 시나리오
 - 메인 페이지
-  ![index](../../images/2022-06-22-capstone/index.PNG)
+  ![index](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/6f07de8d-8378-4869-ba80-c34754364495)
   메인 페이지에서는 서비스의 개요와 주요 기능들을 소개한다. 중앙 또는 우측 상단의 로그인 버튼을 통해 로그인 페이지로 이동할 수 있다. 로그인을 하지 않은 사용자는 서비스를 이용할 수   없도록 집중도 측정 버튼을 눌러도 로그인 페이지로 이동한다.
 
 - 로그인 및 회원가입
-  <img src="../../images/2022-06-22-capstone/login.PNG" alt="login"  />
-  ![signup](../../images/2022-06-22-capstone/signup.PNG)
+  ![login](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/094d3765-d6b1-4c06-9914-4ea765a68586)
+  ![signup](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/5de236ea-f78e-4b5a-b4de-b63e3d999ebf)
 
 - 마이 페이지
-  ![mypage](../../images/2022-06-22-capstone/mypage.PNG)
+  ![mypage](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/da48e73c-074f-4dcd-a309-115b36127e5a)
   로그인한 사용자는 마이 페이지로 이동한다. 마이 페이지에서는 과거 학습기록을 캘린더에 점수에 따른 이모티콘 형태로 표시해 학습 이력을 조회 및 관리할 수 있다. 캘린더 제작은 huiwenteo.com의 게시글을 참고하였다.
   - [HOW TO CREATE A CALENDAR USING DJANGO](https://www.huiwenteo.com/normal/2018/07/24/django-calendar.html)
 
 - 집중도 측정
-  ![project](../../images/2022-06-22-capstone/project.PNG)
+  ![project](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/f9cea163-7aaf-406b-a8e2-cd45f40c7142)
   집중도 측정 페이지로 들어가면 시작 버튼을 눌러 측정을 시작할 수 있다. 측정 도중 다른 페이지로 이동하게 되면 기록된 점수가 제대로 처리되지 않기 때문에 상단에 내비게이션 바를 모두 제거하였다.
     - 집중 판단 모습
-      ![concentrate](../../images/2022-06-22-capstone/concentrate.PNG)
+      ![concentrate](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/a26d0ac6-6503-40de-8f8b-6a8976188676)
     - 비집중 판단 모습
-      ![noconcentrate](../../images/2022-06-22-capstone/noconcentrate.PNG)
-   ![stop](../../images/2022-06-22-capstone/stop.PNG)
+      ![noconcentrate](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/96769db7-ce05-4127-abaf-0240bb3620ed)
+   ![stop](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/e67351b0-9355-4b54-a4ac-a43781cd7971)
    일시정지 버튼을 누르고 다시 정지 버튼을 누르면 나오는 알림 메시지에서 확인 버튼을 누르면 결과 페이지로 이동한다.
   
 - 결과 페이지
-  ![result](../../images/2022-06-22-capstone/result.PNG)
+  ![result](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/5bb91f4f-eef2-487f-be5a-1ddff27bde30)
   결과 페이지에서는 집중도 측정 결과를 분 단위로 점수화해 그린 차트가 보여진다.
-  ![result_error](../../images/2022-06-22-capstone/result_error.PNG)
+  ![result_error](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/1a2828e2-a7d4-4f41-859b-7637f0008f43)
   만약 집중도 측정 페이지에서 측정을 하지 않고 바로 정지 버튼을 누른다면 측정 결과가 존재하지 않는다는 메시지가 나타난다.
   
 ## 설계 및 구현
