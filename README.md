@@ -6,6 +6,16 @@
 	<a href="#사용-기술">사용 기술</a>
 	<span> · </span>
 	<a href="#사용방법">사용방법</a>
+	<span> · </span>
+	<a href="#개발-배경">개발 배경</a>
+	<span> · </span>
+	<a href="#사용-시나리오">사용 시나리오</a>
+	<span> · </span>
+	<a href="#설계-및-구현">설계 및 구현</a>
+	<span> · </span>
+	<a href="#한계">한계</a>
+	<span> · </span>
+	<a href="#소감">소감</a>
 </h3>
 
 ---
@@ -39,7 +49,7 @@ Python 기반 웹 프레임워크인 Django를 사용하였고 mashup-template.c
 이 페이지에서는 서비스를 위한 웹 개발 과정에 중점을 두어 기록하였다. 작품개요는 아래 포스터와 같다. 
 ![poster](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/88d84ea6-dc7c-401a-b5a5-b1d180ec8f94)
 
-## 주요 기능별 사용 시나리오
+## 사용 시나리오
 - 메인 페이지
   ![index](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/6f07de8d-8378-4869-ba80-c34754364495)
   메인 페이지에서는 서비스의 개요와 주요 기능들을 소개한다. 중앙 또는 우측 상단의 로그인 버튼을 통해 로그인 페이지로 이동할 수 있다. 로그인을 하지 않은 사용자는 서비스를 이용할 수   없도록 집중도 측정 버튼을 눌러도 로그인 페이지로 이동한다.
