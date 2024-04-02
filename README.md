@@ -3,7 +3,7 @@
 <h3 align="center">
 	<a href="#개요">개요</a>
 	<span> · </span>
-	<a href="#사용기술">사용 기술</a>
+	<a href="#사용-기술">사용 기술</a>
 	<span> · </span>
 	<a href="#사용방법">사용방법</a>
 </h3>
