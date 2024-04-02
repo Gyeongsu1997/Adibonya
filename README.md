@@ -3,6 +3,8 @@
 <h3 align="center">
 	<a href="#개요">개요</a>
 	<span> · </span>
+	<a href="#사용기술">사용 기술</a>
+	<span> · </span>
 	<a href="#사용방법">사용방법</a>
 </h3>
 
@@ -10,6 +12,10 @@
 
 ## 개요
 온라인 강의를 통한 학습 시에 웹캠을 통해 집중도를 측정하여 그 결과를 점수로 보여주고 기록하는 서비스입니다.
+
+## 사용 기술
+Python 기반 웹 프레임워크인 Django를 사용하였고 mashup-template.com에서 제공하는 Mountain HTML 템플릿을 사용하였습니다. DBMS는 Django에서 기본으로 제공하는 SQLite를 사용하였습니다.
+- [Mashup Template](http://www.mashup-template.com/)
 
 ## 사용방법
 - 터미널에서 명령어 입력
@@ -32,10 +38,6 @@
 
 이 페이지에서는 서비스를 위한 웹 개발 과정에 중점을 두어 기록하였다. 작품개요는 아래 포스터와 같다. 
 ![poster](https://github.com/Gyeongsu1997/Adibonya/assets/97381683/88d84ea6-dc7c-401a-b5a5-b1d180ec8f94)
-
-## 사용 기술
-Python 기반 웹 프레임워크인 Django를 사용하였고 mashup-template.com에서 제공하는 Mountain HTML 템플릿을 사용하였다. DBMS는 Django에서 기본으로 제공하는 SQLite를 사용하였다.
-- [Mashup Template](http://www.mashup-template.com/)
 
 ## 주요 기능별 사용 시나리오
 - 메인 페이지
